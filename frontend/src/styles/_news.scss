@@ -1,0 +1,70 @@
+.news {
+  padding: 5rem 0;
+  &-main {
+    &-content {
+      @include grid(30rem);
+      .item {
+        gap: 1.5rem;
+        .image {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          .infomation {
+            @include maxWidth(450px) {
+              display: flex;
+              flex-direction: column;
+              gap: 0;
+            }
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            .date {
+              @include text(1.2rem);
+              font-weight: 600;
+            }
+            .user {
+              @include text(1.2rem);
+              display: flex;
+              text-transform: none;
+              h4 {
+                @include text(1.2rem);
+                margin-left: 0.3rem;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+        .caption {
+          @include text(1.6rem);
+          text-transform: none;
+          font-weight: 600;
+          transition: $transition;
+          &::first-letter {
+            text-transform: capitalize;
+          }
+          &:hover {
+            color: $darkorange;
+          }
+        }
+        .description {
+          @include text(1.2rem);
+          color: $gray-light;
+        }
+      }
+    }
+  }
+}
+
+.all-news {
+  padding: 20rem 0 5rem;
+}
+
+@include maxWidth(768px) {
+  .news {
+    &-main {
+      &-content {
+        @include grid(15rem);
+      }
+    }
+  }
+}

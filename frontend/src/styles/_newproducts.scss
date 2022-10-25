@@ -1,0 +1,15 @@
+@include maxWidth(1024px) {
+  .content {
+    @include grid(20rem);
+  }
+}
+
+@include maxWidth(768px) {
+  .newProducts {
+    .newProducts-main {
+      .content {
+        @include grid(15rem);
+      }
+    }
+  }
+}

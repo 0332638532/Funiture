@@ -1,0 +1,29 @@
+.detail-new {
+  padding: 20rem 0 10rem;
+  &-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    h2 {
+      @include text(2rem);
+      text-transform: capitalize;
+      font-weight: 700;
+      color: $text;
+    }
+    img {
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+      margin: 3.5rem auto;
+    }
+    .date {
+      @include text(1.4rem);
+      color: $gray;
+    }
+    p {
+      @include text(1.2rem);
+      color: $text;
+      line-height: 2.4rem;
+    }
+  }
+}

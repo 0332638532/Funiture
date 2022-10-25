@@ -1,0 +1,294 @@
+.shipping {
+  display: flex;
+  .deliver {
+    flex: 1 1 55rem;
+    padding: 3rem 0 6rem 12rem;
+    .form {
+      font-size: 1.2rem;
+      h2 {
+        @include text(2.6rem);
+        line-height: 3rem;
+      }
+      span {
+        @include text(1.2rem);
+        line-height: 6rem;
+        i {
+          font-size: 0.8rem;
+          margin: 0 0.5rem;
+        }
+        &.active {
+          color: rgb(26, 136, 226);
+        }
+      }
+      h3 {
+        @include text(1.6rem);
+      }
+      .text {
+        margin: 2rem 0;
+      }
+      .radio-container {
+        display: inline-flex;
+        align-items: center;
+        margin: 2rem 0;
+        padding: 2rem;
+        border: 0.1rem solid $darkorange;
+        border-radius: 0.5rem;
+        .form-check-input {
+          width: 1.5rem;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          margin-right: 1.5rem;
+        }
+        .form-check-label {
+          @include text(1.4rem);
+          color: $gray;
+        }
+      }
+      .list-info {
+        width: 80%;
+        padding: 2rem;
+        border: 0.1rem solid $gray-light;
+        border-radius: 0.5rem;
+        background-color: #fafafa;
+        box-shadow: $box-shadow;
+        &-user {
+          position: relative;
+          margin-bottom: 5rem;
+          &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -2rem;
+            width: 90%;
+            height: 0.1rem;
+            background-color: $gray-light;
+            border-radius: 0.5rem;
+          }
+          .info-user {
+            margin-bottom: 1rem;
+            i {
+              font-size: 2rem;
+              color: $darkorange;
+              padding-right: 1rem;
+            }
+            span {
+              @include text(1.4rem);
+            }
+          }
+          p {
+            @include text(1.2rem);
+          }
+          .info-status {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            border-radius: 0.5rem;
+            background-color: #3b84f1;
+            &.active {
+              background-color: #f15f79;
+            }
+            p {
+              color: $white;
+            }
+          }
+        }
+      }
+      .user {
+        display: flex;
+        gap: 1rem;
+        margin: 2rem 0;
+        .image {
+          background-color: $gray-light;
+          border-radius: 0.5rem;
+          i {
+            font-size: 2.6rem;
+            color: $white;
+            padding: 2rem;
+          }
+        }
+        span {
+          font-size: 1.4rem;
+          text-transform: none;
+        }
+      }
+      .form__div {
+        position: relative;
+        height: 48px;
+        margin: 4rem 0;
+      }
+      .form__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        font-size: 1.4rem;
+        border: $boder;
+        border-width: 0.1rem;
+        border-radius: 0.5rem;
+        outline: none;
+        padding: 1rem;
+        background: none;
+        z-index: 1;
+      }
+      .form__label {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        padding: 0 0.25rem;
+        background-color: #fff;
+        color: $gray;
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        transition: 0.3s;
+      }
+      .form__input:focus + .form__label {
+        top: -1rem;
+        left: 0.8rem;
+        color: $darkorange;
+        font-size: 1.4rem;
+        font-weight: 500;
+        z-index: 10;
+      }
+
+      .form__input:not(:placeholder-shown).form__input:not(:focus)
+        + .form__label {
+        top: -1rem;
+        left: 0.8rem;
+        z-index: 10;
+        font-weight: 500;
+      }
+
+      .form__input:focus {
+        border: 0.15rem solid #3b84f1;
+      }
+      .css-b62m3t-container {
+        position: relative;
+        box-sizing: border-box;
+        width: 80%;
+        margin: 2rem 0;
+      }
+      .css-3iigni-container {
+        pointer-events: none;
+        position: relative;
+        box-sizing: border-box;
+        width: 80%;
+        margin: 2rem 0;
+      }
+      .btn-deliver {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      button {
+        font-size: 1.4rem;
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background-color: $darkorange;
+        color: $white;
+        border-radius: 0.5rem;
+        margin-right: 16rem;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+          opacity: 0.95;
+        }
+      }
+      a:hover {
+        transition: $transition;
+        color: $darkorange;
+      }
+    }
+  }
+  .info-payment {
+    flex: 1 1 45rem;
+    background-color: #fafafa;
+    border-left: 0.1rem solid $gray-light;
+    padding: 3rem 0 0 5rem;
+    height: 100vh;
+    .max-with {
+      max-width: 45rem;
+      @include maxWidth(450px) {
+        padding-right: 3rem;
+      }
+      .info-product {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 3rem;
+        .image {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          img {
+            position: relative;
+            width: 6.5rem;
+            height: 6.5rem;
+            border-radius: 0.5rem;
+            object-fit: cover;
+            border: 0.1rem solid $gray;
+          }
+          span {
+            position: absolute;
+            top: -1rem;
+            left: 5.5rem;
+            font-size: 1.3rem;
+            height: 2rem;
+            width: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            background-color: $gray-light1;
+            border-radius: 50%;
+            color: $white;
+          }
+          .name {
+            @include text(1.4rem);
+          }
+        }
+        .price {
+          @include text(1.4rem);
+        }
+      }
+      .temporary-price {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+        border-top: 0.1rem solid $gray-light;
+        p {
+          @include text(1.4rem);
+        }
+      }
+      .total {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        h2 {
+          @include text(1.8rem);
+          span {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $gray-light1;
+            padding: 0 1.5rem;
+          }
+        }
+      }
+      .btn-paypal {
+        margin: 4rem 0;
+      }
+    }
+  }
+}
+
+@include maxWidth(768px) {
+  .shipping {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    .deliver {
+      padding: 3rem 0 6rem 5rem;
+      .form button {
+        margin-right: 10rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@mixin maxWidth($q) {
+  @media screen and (max-width: $q) {
+    @content;
+  }
+}
+
+@mixin minWidth($q) {
+  @media screen and (min-width: $q) {
+    @content;
+  }
+}
+
+@mixin minAndmaxWidth($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin text($valText) {
+  font-size: $valText;
+  color: $text;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+}
+
+@mixin textUpperCase($valTextUp) {
+  font-size: $valTextUp;
+  color: $text;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+@mixin text-large($valTextLarge) {
+  font-size: $valTextLarge;
+  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+}
+
+@mixin grid($valGrid) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($valGrid, 1fr));
+  gap: 3rem;
+}

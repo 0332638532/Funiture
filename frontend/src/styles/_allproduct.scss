@@ -1,0 +1,13 @@
+.allproduct {
+  padding: 15rem 0 10rem;
+  &-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 13.5rem;
+    .product-medium {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: grey;
+  .thead-default {
+    border-top: 1px solid #ddd;
+    background: #acacac;
+    tr {
+      th {
+        padding: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .a-center {
+    text-align: center !important;
+  }
+  tbody {
+    background-color: #eee;
+    tr {
+      text-align: center;
+      td {
+        padding: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

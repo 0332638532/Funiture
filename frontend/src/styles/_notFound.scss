@@ -1,0 +1,15 @@
+.notFound {
+  margin: 20rem auto 10rem;
+  text-align: center;
+  h3 {
+    font-size: 20rem;
+    font-weight: 600;
+    color: $darkorange;
+  }
+  span {
+    font-size: 1.4rem;
+    a {
+      color: $darkorange;
+    }
+  }
+}

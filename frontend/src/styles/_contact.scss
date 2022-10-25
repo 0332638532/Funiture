@@ -1,0 +1,55 @@
+.contact {
+  padding: 20rem 0 10rem;
+  &-main {
+    display: flex;
+    gap: 2rem;
+    @include maxWidth(893px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &-feedback {
+      flex: 1 1 30rem;
+      .text {
+        @include text(1.2rem);
+        color: $text;
+        text-transform: none;
+        font-weight: 300;
+        margin: 0.8rem 0;
+        i {
+          width: 3rem;
+          height: 3rem;
+          line-height: 3rem;
+          color: $darkorange;
+          border: 0.1rem solid $darkorange;
+          border-radius: 50%;
+          text-align: center;
+          margin-right: 0.5rem;
+        }
+      }
+      h3 {
+        @include text(1.8rem);
+        color: $dark;
+        text-transform: capitalize;
+        margin: 7rem 0 3rem;
+      }
+      input,
+      textarea {
+        display: block;
+        padding: 0.6rem 1rem;
+        font-size: 1.3rem;
+        border: 0.1rem solid $darkorange;
+        margin: 1.5rem 0;
+      }
+      .btn-contact {
+        font-size: 1.3rem;
+        &:hover {
+          opacity: 0.9;
+          transition: 0.2s linear;
+        }
+      }
+    }
+    &-map {
+      flex: 1 1 75rem;
+    }
+  }
+}

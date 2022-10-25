@@ -1,0 +1,91 @@
+#profile {
+  display: flex;
+  grid-gap: 1rem 2rem;
+  padding: 20rem 0 5rem;
+  .infomation {
+    flex: 1 1 60rem;
+  }
+  .card {
+    flex: 1 1 30rem;
+    border-radius: 1rem;
+    background: #eee;
+    padding: 2rem;
+    &-avatar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 15rem;
+      height: 15rem;
+      margin: 0 auto 2rem;
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20rem;
+    }
+    &-status {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 3rem;
+      background-color: #07a787;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      border: 4px solid white;
+    }
+    &-name {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    &-desc {
+      font-size: 1.3rem;
+      text-align: center;
+      color: #999;
+      line-height: 1.6;
+      max-width: 25rem;
+      margin: 0 auto 2rem;
+      i {
+        color: #ff7870;
+      }
+    }
+    &-meta {
+      margin-bottom: 0.5rem;
+      &-item {
+        text-align: center;
+      }
+      &-number {
+        @include text(1.4rem);
+      }
+      &-txt {
+        font-size: 1.2rem;
+        color: #999;
+      }
+    }
+    &-action {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-button {
+      display: block;
+      padding: 1rem 2rem;
+      color: white;
+      border-radius: 1rem;
+      border: 0;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      width: calc(50% - 2rem);
+      font-weight: bold;
+      cursor: pointer;
+      &--primary {
+        background-color: #ff7870;
+      }
+      &--secondary {
+        background-color: #2979ff;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.payment-success {
+  padding: 30rem 0 10rem;
+  &-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .icon-success {
+      i {
+        font-size: 6rem;
+        color: #5cb85c;
+      }
+    }
+    .text {
+      @include text(1.8rem);
+      color: $dark;
+      text-transform: capitalize;
+      color: #5cb85c;
+      margin-bottom: 1rem;
+    }
+    .sub-text {
+      @include text(1.4rem);
+      color: $dark;
+      text-transform: capitalize;
+    }
+    a {
+      @include text(1.4rem);
+      color: $dark;
+      margin-top: 1rem;
+      &:hover {
+        color: $darkorange;
+        transition: all 0.25s linear;
+      }
+      i {
+        color: $darkorange;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
